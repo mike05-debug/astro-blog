@@ -1,4 +1,6 @@
 ---
+import Navigation from "../components/navigation.astro"
+import Footer from '../components/footer.astro';
 import "../styles/global.css"
 
 const pageTitle = "About Me";
@@ -14,7 +16,7 @@ const skills = ["Digital Art", "HTML5", "CSS", "JS", "C#", "Python", "GDScript",
 
 const happy = true;
 const finished = false;
-const goal = 3;
+let goal = 0;
 
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -43,12 +45,7 @@ const textCase = "uppercase";
 		</style>
 	</head>
 	<body>
-		<header>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/blog">Blog</a>
-        </header>
-
+		<Navigation />
         <h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
 
@@ -73,6 +70,7 @@ const textCase = "uppercase";
 
 		{finished && <p>I finished this tutorial!</p>}
 
-		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> :  <p>My goal is not to finish in 3 days.</p>}
+		<Footer></Footer>
 	</body>
 </html>
