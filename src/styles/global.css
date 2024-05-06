@@ -21,11 +21,27 @@ h1 {
 }
 
 /* nav styles */
-
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+  
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: cornflowerblue;
+    border-radius: 4px;
+}
+  
 .nav-links {
+    text-align: center;
     width: 100%;
     top: 5rem;
     left: 48px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
     display: none;
     margin: 0;
 }
@@ -39,12 +55,11 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     color: black;
-    border-radius: 5px;
 }
   
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links a:hover, a:focus {
     background-color: cornflowerblue;
+    border-radius: 5px;
     color: white;
 }
   
@@ -66,4 +81,7 @@ h1 {
       padding: 15px 20px;
     }
   
+    .hamburger {
+      display: none;
+    }
 }
